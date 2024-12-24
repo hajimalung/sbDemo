@@ -8,15 +8,11 @@ import org.springframework.context.ApplicationContext;
 public class SpringbootDemoApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context =  SpringApplication.run(SpringbootDemoApplication.class, args);
+		ApplicationContext context = SpringApplication.run(SpringbootDemoApplication.class, args);
 		System.out.println("Hello World!");
 
 		Alien obj = context.getBean(Alien.class);
 		obj.code();
-
-		Laptop laptop = context.getBean(Laptop.class);
-		Alien obj2 = context.getBean(Alien.class);
-		obj2.code(laptop);
 	}
 
 }
